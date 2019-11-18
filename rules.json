@@ -1,0 +1,9 @@
+[
+    {"dealId":1,"levelId":1,"itemId":1,"name":"Kone","min":3,"value":"2588.99","deal":0,"dealType":false},
+    {"dealId":2,"levelId":1,"itemId":2,"name":"Ironhide","min":0,"value":"2500.00","deal":0,"dealType":false},
+    {"dealId":3,"levelId":1,"itemId":3,"name":"Ironhide Cartridge","min":3,"value":"353.32","deal":2,"dealType":true},
+    {"dealId":4,"levelId":2,"itemId":1,"name":"Kone","min":5,"value":"2888.99","deal":0,"dealType":false},
+    {"dealId":5,"levelId":2,"itemId":2,"name":"Ironhide","min":0,"value":"3000.00","deal":0,"dealType":1},
+    {"dealId":6,"levelId":2,"itemId":3,"name":"Ironhide Cartridge","min":5,"value":"423.99‬","deal":4,"dealType":true},
+    {"dealId":7,"levelId":3,"itemId":6,"name":"SANTA CRUZ","min":3,"value":"123.67‬","deal":2,"dealType":true}
+]

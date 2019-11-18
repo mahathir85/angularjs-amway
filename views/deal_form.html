@@ -1,0 +1,36 @@
+<form>
+    <br>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Level of Recipient: </label>
+        <select class="form-control" id="exampleFormControlSelect1" ng-model="form.levelId" ng-change="initItemDeal()" ng-options="note.id as note.text for note in levelRecipient">
+        </select>
+    </div>        
+    <div class="form-group">
+        <label for="exampleFormControlSelect2">Item: </label>
+        <select class="form-control" id="exampleFormControlSelect2" ng-model="form.itemId" ng-change="updateItem()" ng-options="note.id as note.name for note in selectedItems">
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect3">Minimum Purchase: </label>
+        <input class="form-control" type="number" id="exampleFormControlSelect3" ng-model="form.min"/>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect4">Deals Quantity: </label>
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+            <input type="checkbox" ng-model="form.dealType" aria-label="Checkbox for following text input">
+            </div>
+        </div>
+        <input type="number" class="form-control" ng-model="form.deal" ng-disabled="form.dealType == false" ng-change="updatePrice()" aria-label="Text input with checkbox">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect5">Price Per Unit: </label>
+        <input class="form-control" ng-disabled="form.dealType == true" type="number" string-to-number id="exampleFormControlSelect5" ng-model="form.value"/>
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-primary" ng-click="save()">Save</button>
+        <button type="button" class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</form>

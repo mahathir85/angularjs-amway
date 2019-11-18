@@ -1,0 +1,38 @@
+<form>
+    <br>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Level of Recipient: </label>
+        <select class="form-control" id="exampleFormControlSelect1" ng-model="level" ng-options="note.id as note.text for note in levelRecipient">
+        </select>
+    </div>    
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Items: </label>
+        <table class="table">
+            <thead>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="d in data.data">
+                    <td>{{d.name}}</td>
+                    <td>RM{{d.value}}</td>
+                    <td><input type="number" class="form-control" ng-model="d.quantity" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-primary" ng-click="calculate()">Calculate</button>
+        <button type="button" class="btn btn-info">Reset</button>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1"><strong>Cart Items: </strong></label>
+        <div>{{checkoutItems}}</div>
+
+    </div>  
+    <div class="form-group">
+        <label for="exampleFormControlSelect1"><strong>Total Expected: </strong></label>
+        <div>{{total}}</div>
+    </div>  
+</form>

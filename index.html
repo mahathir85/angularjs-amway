@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="node_modules/angular/angular.min.js"></script>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"></link>
+
+<script src="app.js"></script>
+
+<body ng-app="myApp">
+
+<div class="container" ng-controller="myCtrl">
+    <h3>Amway Shopping - AngularJS</h3>
+    <hr>
+    <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Cart</a>
+        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Deals</a>
+    </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <amway-cart></amway-cart>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <amway-deals ng-show="view == 'list'"></amway-deals>
+            <amway-dealform ng-show="view == 'form'"></amway-dealform>
+        </div>
+    </div>
+    
+</div>
+
+</body>
+
+</html>
