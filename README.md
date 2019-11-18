@@ -1,4 +1,3 @@
-# angularjs-amway
 angularjs-amway
 ===============
 
